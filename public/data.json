@@ -1,0 +1,136 @@
+{
+  "tiles": [
+    {
+      "id": "001",
+      "title": "Ceramic Blue Tile",
+      "description": "Premium ceramic tile with blue glaze finish",
+      "image": "/tiles/001.jpg",
+      "category": "ceramic",
+      "price": 45.99,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_002",
+      "title": "Emerald Glossy Tile",
+      "description": "Deep emerald green ceramic tile with a high-gloss reflective finish.",
+      "image": "/tiles/002.jpg",
+      "category": "ceramic",
+      "price": 48.5,
+      "currency": "USD",
+      "dimensions": "30x60 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_003",
+      "title": "Carrara Marble Porcelain",
+      "description": "Luxury porcelain tile featuring realistic grey veining on a white base.",
+      "image": "/tiles/003.jpg",
+      "category": "porcelain",
+      "price": 62.99,
+      "currency": "USD",
+      "dimensions": "60x120 cm",
+      "material": "Porcelain",
+      "inStock": true
+    },
+    {
+      "id": "tile_004",
+      "title": "Slate Grey Stone Tile",
+      "description": "Natural slate texture with a matte finish, ideal for high-traffic areas.",
+      "image": "/tiles/004.jpg",
+      "category": "stone",
+      "price": 55.0,
+      "currency": "USD",
+      "dimensions": "40x40 cm",
+      "material": "Natural Stone",
+      "inStock": false
+    },
+    {
+      "id": "tile_005",
+      "title": "Desert Sand Terracotta",
+      "description": "Hand-crafted rustic terracotta tile with warm earthy tones.",
+      "image": "/tiles/005.jpg",
+      "category": "terracotta",
+      "price": 39.95,
+      "currency": "USD",
+      "dimensions": "30x30 cm",
+      "material": "Clay",
+      "inStock": true
+    },
+    {
+      "id": "tile_006",
+      "title": "Midnight Hexagon Tile",
+      "description": "Modern matte black hexagon tile for contemporary kitchen backsplashes.",
+      "image": "/tiles/006.jpg",
+      "category": "porcelain",
+      "price": 52.25,
+      "currency": "USD",
+      "dimensions": "20x20 cm",
+      "material": "Porcelain",
+      "inStock": true
+    },
+    {
+      "id": "tile_007",
+      "title": "Oak Wood-Look Plank",
+      "description": "Ceramic tile designed to mimic the appearance and texture of natural oak wood.",
+      "image": "/tiles/007.jpg",
+      "category": "ceramic",
+      "price": 44.99,
+      "currency": "USD",
+      "dimensions": "20x100 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_008",
+      "title": "Azure Glass Mosaic",
+      "description": "Shimmering glass mosaic tiles in varying shades of Mediterranean blue.",
+      "image": "/tiles/008.jpg",
+      "category": "mosaic",
+      "price": 89.0,
+      "currency": "USD",
+      "dimensions": "30x30 cm",
+      "material": "Glass",
+      "inStock": true
+    },
+    {
+      "id": "tile_009",
+      "title": "Travertine Beige Tile",
+      "description": "Classic honed travertine stone providing a soft, neutral backdrop.",
+      "image": "/tiles/009.jpg",
+      "category": "stone",
+      "price": 75.4,
+      "currency": "USD",
+      "dimensions": "60x60 cm",
+      "material": "Travertine",
+      "inStock": false
+    },
+    {
+      "id": "tile_010",
+      "title": "Art Deco Pattern Tile",
+      "description": "Geometric patterned ceramic tile with a vintage monochrome design.",
+      "image": "/tiles/010.jpg",
+      "category": "ceramic",
+      "price": 58.0,
+      "currency": "USD",
+      "dimensions": "25x25 cm",
+      "material": "Ceramic",
+      "inStock": true
+    },
+    {
+      "id": "tile_011",
+      "title": "Cloud White Subway Tile",
+      "description": "Timeless beveled edge subway tile for a clean and bright look.",
+      "image": "/tiles/011.jpg",
+      "category": "ceramic",
+      "price": 29.99,
+      "currency": "USD",
+      "dimensions": "10x20 cm",
+      "material": "Ceramic",
+      "inStock": true
+    }
+  ]
+}

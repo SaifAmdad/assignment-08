@@ -44,7 +44,12 @@ function Navbar() {
               {navlinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link
+            href={"/"}
+            className="text-2xl font-extrabold bg-linear-to-r from-blue-900 via-slate-300 to-white bg-clip-text text-transparent"
+          >
+            Tiles Gallery
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
