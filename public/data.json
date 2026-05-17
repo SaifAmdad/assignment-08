@@ -10,7 +10,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Blue", "Ceramic", "Glossy", "Premium"]
     },
     {
       "id": "tile_002",
@@ -22,7 +23,8 @@
       "currency": "USD",
       "dimensions": "30x60 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Green", "Emerald", "High-Gloss", "Reflective"]
     },
     {
       "id": "tile_003",
@@ -34,7 +36,8 @@
       "currency": "USD",
       "dimensions": "60x120 cm",
       "material": "Porcelain",
-      "inStock": true
+      "inStock": true,
+      "tags": ["White", "Marble-Look", "Luxury", "Veined"]
     },
     {
       "id": "tile_004",
@@ -46,7 +49,8 @@
       "currency": "USD",
       "dimensions": "40x40 cm",
       "material": "Natural Stone",
-      "inStock": false
+      "inStock": false,
+      "tags": ["Grey", "Natural Stone", "Matte", "Durable"]
     },
     {
       "id": "tile_005",
@@ -58,7 +62,8 @@
       "currency": "USD",
       "dimensions": "30x30 cm",
       "material": "Clay",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Beige", "Terracotta", "Rustic", "Earth-Tone"]
     },
     {
       "id": "tile_006",
@@ -70,7 +75,8 @@
       "currency": "USD",
       "dimensions": "20x20 cm",
       "material": "Porcelain",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Black", "Matte", "Hexagon", "Modern"]
     },
     {
       "id": "tile_007",
@@ -82,7 +88,8 @@
       "currency": "USD",
       "dimensions": "20x100 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Brown", "Wood-Look", "Plank", "Natural"]
     },
     {
       "id": "tile_008",
@@ -94,7 +101,8 @@
       "currency": "USD",
       "dimensions": "30x30 cm",
       "material": "Glass",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Blue", "Mosaic", "Glass", "Shimmering"]
     },
     {
       "id": "tile_009",
@@ -106,7 +114,8 @@
       "currency": "USD",
       "dimensions": "60x60 cm",
       "material": "Travertine",
-      "inStock": false
+      "inStock": false,
+      "tags": ["Beige", "Travertine", "Honed", "Classic"]
     },
     {
       "id": "tile_010",
@@ -118,7 +127,8 @@
       "currency": "USD",
       "dimensions": "25x25 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["Monochrome", "Patterned", "Vintage", "Geometric"]
     },
     {
       "id": "tile_011",
@@ -130,7 +140,8 @@
       "currency": "USD",
       "dimensions": "10x20 cm",
       "material": "Ceramic",
-      "inStock": true
+      "inStock": true,
+      "tags": ["White", "Subway", "Glossy", "Minimalist"]
     }
   ]
 }
