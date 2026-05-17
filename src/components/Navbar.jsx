@@ -1,22 +1,23 @@
 import Link from "next/link";
 import React from "react";
+import Navlink from "./shared/Navlink";
 
 function Navbar() {
   const navlinks = (
     <>
       <li>
-        <Link href={"/"}>Home</Link>
+        <Navlink href={"/"} path={"Home"}></Navlink>
       </li>
       <li>
-        <Link href={"/all-tiles"}>All Tiles</Link>
+        <Navlink href={"/all-tiles"} path={"All Tiles"}></Navlink>
       </li>
       <li>
-        <Link href={"/profile"}>My Profile</Link>
+        <Navlink href={"/profile"} path={"My Profile"}></Navlink>
       </li>
     </>
   );
   return (
-    <div className=" bg-base-100 shadow-sm">
+    <div className="bg-base-100 shadow-sm">
       <div className="container mx-auto navbar">
         <div className="navbar-start">
           <div className="dropdown">
@@ -46,7 +47,7 @@ function Navbar() {
           </div>
           <Link
             href={"/"}
-            className="text-2xl font-extrabold bg-linear-to-r from-blue-900 via-slate-300 to-white bg-clip-text text-transparent"
+            className="text-2xl font-extrabold bg-linear-to-r from-blue-900 via-[#2FA084] to-[#1F6F5F] bg-clip-text text-transparent"
           >
             Tiles Gallery
           </Link>
@@ -55,7 +56,12 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link href={"/login"}>Login</Link>
+          <Link
+            href={"/login"}
+            className="btn border-teal-800 text-[#0E6F75] px-7 hover:bg-[#0E6F75] hover:text-[#ffff] "
+          >
+            Login
+          </Link>
         </div>
       </div>
     </div>

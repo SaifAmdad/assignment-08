@@ -1,13 +1,13 @@
+import FeatureTile from "@/components/FeatureTile";
+import Footer from "@/components/Footer";
 import HomeBanner from "@/components/HomeBanner";
-import Navbar from "@/components/Navbar";
-import { Button } from "@heroui/react";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <div data-theme="light">
       <HomeBanner />
+      <FeatureTile />
+      <Footer />
     </div>
   );
 }

@@ -4,6 +4,18 @@ const nextConfig = {
   images: {
     domains: ["namprokash.github.io"],
   },
+
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: "https",
+  //       hostname: "namprokash.github.io",
+  //       port: "",
+  //       pathname: "/**",
+  //       search: "",
+  //     },
+  //   ],
+  // },
 };
 
 export default nextConfig;

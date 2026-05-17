@@ -1,35 +1,64 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
-import { useEffect, useState } from "react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Image from "next/image";
-
-//https://namprokash.github.io/assingment-08-data/data.json
+import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
 function HomeBanner() {
-  const [tilesData, setTilesData] = useState([]);
-  useEffect(() => {
-    const getData = async () => {
-      const res = await fetch(
-        "https://namprokash.github.io/assingment-08-data/data.json",
-      );
-      const data = await res.json();
-      setTilesData(data.tiles);
-    };
-    getData();
-  }, []);
-  console.log(tilesData);
+  // const [tilesData, setTilesData] = useState([]);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const res = await fetch(
+  //       "https://namprokash.github.io/assingment-08-data/data.json",
+  //     );
+  //     const data = await res.json();
+  //     setTilesData(data.tiles);
+  //   };
+  //   getData();
+  // }, []);
+
   return (
     <>
-      <Swiper
-        className="h-[70vh] "
+      <div
+        className="hero min-h-[50vh]"
+        style={{
+          backgroundImage: "url(tiles/bg-hero.jpg)",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="hero-overlay bg-"></div>
+        <div className="hero-content text-neutral-content text-center">
+          <div className="max-w-full">
+            <h1 className="mb-9 text-5xl font-bold leading-15 text-[#0F1E26]">
+              Discover Your Perfect Aesthetic
+            </h1>
+
+            <Link
+              href={"/all-tiles"}
+              className="btn bg-[#0E6F75] border-none text-white px-5  "
+            >
+              Brows Now
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#0E6F75] text-white">
+        <div className="container mx-auto flex">
+          <button className="btn bg-[#0E6F75] py-6 border-none text-white">
+            New Arrivals :{" "}
+          </button>
+          <Marquee pauseOnHover={true}>
+            <h1 className="font-bold">Desert Sand Terracotta </h1> | Weekly
+            Feature: Modern Geometric Patterns | Join the Community...
+          </Marquee>
+        </div>
+      </div>
+
+      {/* <Swiper
+        className="h-[60vh] bg-[url(/tiles/011.jpg)] bg-cover bg-center "
         modules={[Navigation, Pagination, Scrollbar, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
@@ -40,19 +69,27 @@ function HomeBanner() {
       >
         {tilesData &&
           tilesData.map((tile, index) => (
-            <SwiperSlide key={index} className="bg-amber-100 text-gray-500 ">
-              <div className="h-full flex justify-center items-center">
+            <SwiperSlide
+              key={index}
+              className={` text-gray-500 bg-[url(${tile.image})] bg-cover bg-center`}
+            >
+              <div
+                className={`h-full flex justify-center items-center flex-col `}
+              >
                 <Image
+                  className="h-20"
                   src={tile.image}
                   width={1600}
                   height={900}
                   alt="Picture of the author"
                 />
+                <p>{tile.title}</p>
+
+                <p>{index}</p>
               </div>
             </SwiperSlide>
           ))}
-        ...
-      </Swiper>
+      </Swiper> */}
     </>
   );
 }
