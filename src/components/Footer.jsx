@@ -28,7 +28,7 @@ function Footer() {
                 type="text"
                 spellCheck
                 rows={5}
-                className="input w-full bg-transparent border border-[#D1D5DB]"
+                className="textarea w-full bg-transparent textarea-bordered border-[#D1D5DB]"
                 placeholder="Message"
               />
               <button className="btn text-white bg-[#0E6F75] mt-4">
