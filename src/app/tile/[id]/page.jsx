@@ -18,6 +18,7 @@ async function DetailsPage({ params }) {
             src={data.image}
             width={500}
             height={500}
+            loading="eager"
             alt="Picture of Tile"
           />
         </figure>
@@ -31,7 +32,7 @@ async function DetailsPage({ params }) {
             </p>
 
             <span className="font-bold">Tags :</span>
-            <div className="mt-2">
+            <div className="mt-2 flex gap-1 items-center">
               {data.tags.map((tag, i) => (
                 <span
                   className="mr-2.5 bg-[#E1F1F2] py-1 px-3 rounded-2xl"

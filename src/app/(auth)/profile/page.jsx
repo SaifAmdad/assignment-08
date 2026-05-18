@@ -17,6 +17,7 @@ function ProfilePage() {
             width={300}
             height={300}
             alt="Profile"
+            loading="eager"
             className="rounded-full h-48 w-48 border-[#0E6F75] border-2"
           />
         </div>

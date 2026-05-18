@@ -13,33 +13,9 @@ async function FeatureTile() {
   return (
     <div className=" py-10 bg-[#F4F7F9]">
       <div className="container mx-auto">
-        <h3 className="font-bold text-2xl py-3">Featured Tiles Section</h3>
+        <h3 className="font-bold text-2xl py-3">Featured Tiles </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {data.map((d, i) => (
-            // <div className="card bg-base-100 shadow-sm" key={i}>
-            //   <figure className="h-36 ">
-            //     <Image
-            //       loading="eager"
-            //       src={d.image}
-            //       width={400}
-            //       height={300}
-            //       alt="Image"
-            //       style={{ width: "auto" }}
-            //     />
-            //   </figure>
-            //   <div className="card-body">
-            //     <h2 className="card-title">{d.title}</h2>
-            //     <p className="line-clamp-2">{d.description}</p>
-            //     <div className="card-actions justify-end">
-            //       <Link
-            //         href={`/all-tiles/${d.id}`}
-            //         className="btn bg-[#0E6F75] text-white"
-            //       >
-            //         View Details
-            //       </Link>
-            //     </div>
-            //   </div>
-            // </div>
             <TileCard d={d} key={i} />
           ))}
         </div>

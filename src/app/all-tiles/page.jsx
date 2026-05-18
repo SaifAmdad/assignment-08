@@ -8,8 +8,8 @@ async function AllTilesPage() {
   const { tiles } = await res.json();
 
   return (
-    <div>
-      <div className="container mx-auto flex items-center justify-center py-3">
+    <div className="container mx-auto">
+      <div className=" flex items-center justify-center py-3">
         <input
           type="text"
           placeholder="Tile Title"
@@ -20,7 +20,7 @@ async function AllTilesPage() {
         </button>
       </div>
       {/* -------------------- */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-15">
         {tiles.map((d, i) => (
           <TileCard d={d} key={i} />
         ))}
