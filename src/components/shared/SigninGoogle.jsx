@@ -13,7 +13,6 @@ function SigninGoogle() {
       toast.success("SignIn Successfully !", {
         position: "top-center",
         autoClose: 2000,
-        onClose: () => router.push("/"),
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
