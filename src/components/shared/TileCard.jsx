@@ -9,7 +9,7 @@ function TileCard({ d }) {
         <figure className="h-36 ">
           <Image
             loading="eager"
-            src={d.image}
+            src={d.image || "/title/bg.avif"}
             width={400}
             height={300}
             alt="Image"
