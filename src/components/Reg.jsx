@@ -2,7 +2,6 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React from "react";
-import { AiFillGoogleCircle } from "react-icons/ai";
 import { Bounce, toast, ToastContainer } from "react-toastify";
 import SigninGoogle from "./shared/SigninGoogle";
 

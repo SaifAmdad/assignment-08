@@ -4,7 +4,7 @@ import React from "react";
 import Navlink from "./shared/Navlink";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
-import { Bounce, toast, ToastContainer } from "react-toastify";
+import { Bounce, toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
 function Navbar() {
@@ -30,6 +30,22 @@ function Navbar() {
     }
   };
 
+  const errorTosat = () => {
+    if (!user) {
+      toast.error("Login required !", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
+  };
+
   const navlinks = (
     <>
       <li>
@@ -38,7 +54,7 @@ function Navbar() {
       <li>
         <Navlink href={"/all-tiles"} path={"All Tiles"}></Navlink>
       </li>
-      <li>
+      <li onClick={errorTosat}>
         <Navlink href={"/profile"} path={"My Profile"}></Navlink>
       </li>
     </>
@@ -74,7 +90,7 @@ function Navbar() {
           </div>
           <Link
             href={"/"}
-            className="text-2xl font-extrabold bg-linear-to-r from-blue-900 via-[#2FA084] to-[#1F6F5F] bg-clip-text text-transparent"
+            className="text-[16px] sm:text-2xl font-extrabold bg-linear-to-r from-blue-900 via-[#2FA084] to-[#1F6F5F] bg-clip-text text-transparent"
           >
             Tiles Gallery
           </Link>
@@ -85,7 +101,7 @@ function Navbar() {
         <div className="navbar-end">
           {user ? (
             <div className="flex gap-3 items-center justify-center">
-              <p>
+              <p className=" hidden sm:block">
                 Hello,{" "}
                 <span className="font-semibold text-[#0E6F75]">
                   {user.name.split(" ")[0]}
@@ -96,7 +112,7 @@ function Navbar() {
                   src={user.image || "/tiles/user.png"}
                   height={150}
                   width={150}
-                  className="h-12 w-12 rounded-full"
+                  className=" h-8 w-8 sm:h-12 sm:w-12 rounded-full"
                   alt="Profile"
                 />
               </Link>

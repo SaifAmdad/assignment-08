@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function TileCard({ d }) {
+function SwiperCard({ d }) {
   return (
     <div>
       <div className="card bg-base-100 shadow-sm">
@@ -33,4 +34,4 @@ function TileCard({ d }) {
   );
 }
 
-export default TileCard;
+export default SwiperCard;

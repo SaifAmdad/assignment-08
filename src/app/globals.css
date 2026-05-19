@@ -1,3 +1,13 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 @plugin "daisyui";
+
+/* move left arrow outside */
+.swiper-button-prev {
+  left: -50px; /* adjust distance */
+}
+
+/* move right arrow outside */
+.swiper-button-next {
+  right: -50px; /* adjust distance */
+}

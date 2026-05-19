@@ -44,40 +44,6 @@ function HomeBanner() {
           </Marquee>
         </div>
       </div>
-
-      {/* <Swiper
-        className="h-[60vh] bg-[url(/tiles/011.jpg)] bg-cover bg-center "
-        modules={[Navigation, Pagination, Scrollbar, Autoplay]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation={true}
-        pagination={true}
-        autoplay={true}
-        // scrollbar={true}
-      >
-        {tilesData &&
-          tilesData.map((tile, index) => (
-            <SwiperSlide
-              key={index}
-              className={` text-gray-500 bg-[url(${tile.image})] bg-cover bg-center`}
-            >
-              <div
-                className={`h-full flex justify-center items-center flex-col `}
-              >
-                <Image
-                  className="h-20"
-                  src={tile.image}
-                  width={1600}
-                  height={900}
-                  alt="Picture of the author"
-                />
-                <p>{tile.title}</p>
-
-                <p>{index}</p>
-              </div>
-            </SwiperSlide>
-          ))}
-      </Swiper> */}
     </>
   );
 }

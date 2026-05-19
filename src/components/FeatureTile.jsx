@@ -1,7 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import TileCard from "./shared/TileCard";
+import SwiperComponent from "./SwiperComponent";
 
 async function FeatureTile() {
   const res = await fetch(
@@ -11,15 +10,17 @@ async function FeatureTile() {
   const n = Math.floor(Math.random() * 6);
   const data = tiles?.slice(n, n + 4);
   return (
-    <div className=" py-10 bg-[#F4F7F9]">
+    <div className=" pt-10 pb-5 bg-[#F4F7F9] ">
       <div className="container mx-auto">
         <h3 className="font-bold text-2xl py-3">Featured Tiles </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        <SwiperComponent tiles={tiles} />
+      </div>
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {data.map((d, i) => (
             <TileCard d={d} key={i} />
           ))}
-        </div>
-      </div>
+        </div> */}
     </div>
   );
 }

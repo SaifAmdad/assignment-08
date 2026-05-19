@@ -22,7 +22,7 @@ function Search() {
         <input
           onChange={onChange}
           type="text"
-          placeholder="Tile Title"
+          placeholder="Type Tile Title"
           className="border border-[#0E6F75] p-1.5 w-[80%] rounded-bl-xl rounded-tl-xl"
         />{" "}
         <button className="btn bg-[#0E6F75] text-white rounded-br-xl rounded-tr-xl">
