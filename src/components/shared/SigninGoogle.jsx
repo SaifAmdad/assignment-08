@@ -8,17 +8,21 @@ function SigninGoogle() {
     const data = await authClient.signIn.social({
       provider: "google",
     });
-    toast.success("SignIn Successfully !", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: false,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
+
+    if (!data?.error) {
+      toast.success("SignIn Successfully !", {
+        position: "top-center",
+        autoClose: 2000,
+        onClose: () => router.push("/"),
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
   };
   return (
     <>

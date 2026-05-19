@@ -2,12 +2,12 @@
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
+
 import { FaEdit } from "react-icons/fa";
 
 function ProfilePage() {
   const { data: session } = authClient.useSession();
   const user = session?.user;
-
   if (!user) {
     return;
   }

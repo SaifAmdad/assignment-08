@@ -6,18 +6,6 @@ import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
 function HomeBanner() {
-  // const [tilesData, setTilesData] = useState([]);
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const res = await fetch(
-  //       "https://namprokash.github.io/assingment-08-data/data.json",
-  //     );
-  //     const data = await res.json();
-  //     setTilesData(data.tiles);
-  //   };
-  //   getData();
-  // }, []);
-
   return (
     <>
       <div

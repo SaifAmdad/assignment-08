@@ -15,9 +15,10 @@ function Navbar() {
   const logout = async () => {
     const res = await authClient.signOut();
     if (!res?.error) {
-      toast.success("User Updated Successfully !", {
+      toast.success("User LogOut Successfully !", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 2000,
+        onClose: () => router.push("/login"),
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
@@ -26,7 +27,6 @@ function Navbar() {
         theme: "light",
         transition: Bounce,
       });
-      router.push("/login");
     }
   };
 
@@ -91,13 +91,15 @@ function Navbar() {
                   {user.name.split(" ")[0]}
                 </span>{" "}
               </p>
-              <Image
-                src={user.image || "/tiles/user.png"}
-                height={150}
-                width={150}
-                className="h-12 w-12 rounded-full"
-                alt="Profile"
-              />
+              <Link href={"/profile"}>
+                <Image
+                  src={user.image || "/tiles/user.png"}
+                  height={150}
+                  width={150}
+                  className="h-12 w-12 rounded-full"
+                  alt="Profile"
+                />
+              </Link>
               <button
                 onClick={logout}
                 className="btn border-teal-800 text-[#0E6F75] px-7 hover:bg-[#0E6F75] hover:text-[#ffff] "
@@ -115,19 +117,6 @@ function Navbar() {
           )}
         </div>
       </div>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
     </div>
   );
 }
