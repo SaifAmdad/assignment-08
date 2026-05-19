@@ -1,8 +1,35 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Navlink from "./shared/Navlink";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
+import { Bounce, toast, ToastContainer } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 function Navbar() {
+  const router = useRouter();
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
+  const logout = async () => {
+    const res = await authClient.signOut();
+    if (!res?.error) {
+      toast.success("User Updated Successfully !", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      router.push("/login");
+    }
+  };
+
   const navlinks = (
     <>
       <li>
@@ -56,14 +83,51 @@ function Navbar() {
           <ul className="menu menu-horizontal px-1">{navlinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link
-            href={"/login"}
-            className="btn border-teal-800 text-[#0E6F75] px-7 hover:bg-[#0E6F75] hover:text-[#ffff] "
-          >
-            Login
-          </Link>
+          {user ? (
+            <div className="flex gap-3 items-center justify-center">
+              <p>
+                Hello,{" "}
+                <span className="font-semibold text-[#0E6F75]">
+                  {user.name.split(" ")[0]}
+                </span>{" "}
+              </p>
+              <Image
+                src={user.image || "/tiles/user.png"}
+                height={150}
+                width={150}
+                className="h-12 w-12 rounded-full"
+                alt="Profile"
+              />
+              <button
+                onClick={logout}
+                className="btn border-teal-800 text-[#0E6F75] px-7 hover:bg-[#0E6F75] hover:text-[#ffff] "
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link
+              href={"/login"}
+              className="btn border-teal-800 text-[#0E6F75] px-7 hover:bg-[#0E6F75] hover:text-[#ffff] "
+            >
+              Login
+            </Link>
+          )}
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </div>
   );
 }

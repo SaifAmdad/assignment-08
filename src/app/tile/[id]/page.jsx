@@ -8,7 +8,7 @@ async function DetailsPage({ params }) {
   );
   const { tiles } = await res.json();
   const data = tiles.filter((t) => t.id == id)[0];
-  console.log(data);
+
   return (
     <div className="container mx-auto py-10">
       <div className="card sm:card-side bg-base-100 ">

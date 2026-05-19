@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { Bounce, toast, ToastContainer } from "react-toastify";
+import SigninGoogle from "./shared/SigninGoogle";
 
 function Reg() {
   const handleRegister = (e) => {
@@ -27,6 +28,7 @@ function Reg() {
       email: user.email,
       password: user.password,
       image: user.image,
+      callbackURL: "/",
     });
     if (error) {
       toast.error(error.message, {
@@ -92,10 +94,8 @@ function Reg() {
           <button className="btn text-white bg-[#0E6F75] mt-4" type="submit">
             Register
           </button>
-          <button className="btn btn-outline border-[#0E6F75] text-[#0E6F75] mt-4">
-            <AiFillGoogleCircle color="#0E6F75" size={20} /> Sign up with Google
-          </button>
         </form>
+        <SigninGoogle />
         <p className="py-3 px-2 text-[#0E6F75] font-medium">
           Already Registered ?{" "}
           <Link href={"/login"} className="font-semibold underline">

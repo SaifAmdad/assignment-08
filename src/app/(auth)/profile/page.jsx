@@ -1,19 +1,23 @@
+"use client";
+import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEdit } from "react-icons/fa";
 
 function ProfilePage() {
-  const user = {
-    name: "Saif",
-    email: "abc@dss.com",
-    image: "/tiles/008.jpg",
-  };
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
+  if (!user) {
+    return;
+  }
+
   return (
     <>
       <div className="py-10 px-8 sm:px-20 sm:w-150 container bg-base-100 mx-auto my-10 rounded-2xl shadow-sm relative">
         <div className="flex items-center justify-center">
           <Image
-            src={user.image}
+            src={user.image || "/tiles/user.png"}
             width={300}
             height={300}
             alt="Profile"

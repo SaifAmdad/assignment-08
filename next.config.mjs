@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
-  images: {
-    domains: ["namprokash.github.io"],
-  },
 
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // Matches all domains and subdomains
+      },
+      {
+        protocol: "http",
+        hostname: "**", // Matches all unsecure domains
+      },
+    ],
+  },
   // images: {
   //   remotePatterns: [
   //     {
